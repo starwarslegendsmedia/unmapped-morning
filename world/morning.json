@@ -1,0 +1,353 @@
+{
+  "K": {
+    "WORLD": {
+      "w": 1400,
+      "h": 800
+    },
+    "WALK_SPEED": 190,
+    "RADIUS": 18,
+    "REACH": 70,
+    "HOLD_REPEAT_MS": 250,
+    "DAY": {
+      "grass": 10859598,
+      "light": 16770484,
+      "shade": 6846537
+    }
+  },
+  "objects": [
+    {
+      "id": "cottage",
+      "rects": [
+        {
+          "x": 960,
+          "y": 40,
+          "w": 420,
+          "h": 260
+        }
+      ],
+      "at": {
+        "x": 1120,
+        "y": 330
+      }
+    },
+    {
+      "id": "appleTree",
+      "rects": [
+        {
+          "x": 300,
+          "y": 230,
+          "w": 50,
+          "h": 40
+        }
+      ],
+      "at": {
+        "x": 325,
+        "y": 300
+      }
+    },
+    {
+      "id": "pieBasket",
+      "rects": [
+        {
+          "x": 650,
+          "y": 300,
+          "w": 100,
+          "h": 50
+        }
+      ],
+      "at": {
+        "x": 700,
+        "y": 350
+      }
+    },
+    {
+      "id": "henHouse",
+      "rects": [
+        {
+          "x": 160,
+          "y": 480,
+          "w": 200,
+          "h": 130
+        }
+      ],
+      "at": {
+        "x": 260,
+        "y": 640
+      }
+    },
+    {
+      "id": "eggCrate",
+      "rects": [
+        {
+          "x": 530,
+          "y": 600,
+          "w": 60,
+          "h": 40
+        }
+      ],
+      "at": {
+        "x": 560,
+        "y": 650
+      }
+    },
+    {
+      "id": "sockBasket",
+      "rects": [
+        {
+          "x": 740,
+          "y": 640,
+          "w": 80,
+          "h": 40
+        }
+      ],
+      "at": {
+        "x": 780,
+        "y": 690
+      }
+    },
+    {
+      "id": "washingLine",
+      "rects": [
+        {
+          "x": 860,
+          "y": 520,
+          "w": 20,
+          "h": 20
+        },
+        {
+          "x": 1180,
+          "y": 520,
+          "w": 20,
+          "h": 20
+        }
+      ],
+      "at": {
+        "x": 1020,
+        "y": 570
+      }
+    },
+    {
+      "id": "ambrose",
+      "rects": [
+        {
+          "x": 520,
+          "y": 380,
+          "w": 220,
+          "h": 130
+        }
+      ],
+      "at": {
+        "x": 630,
+        "y": 540
+      }
+    },
+    {
+      "id": "neighbour",
+      "rects": [],
+      "at": {
+        "x": 200,
+        "y": 420
+      }
+    },
+    {
+      "id": "rockA",
+      "rects": [
+        {
+          "x": 100,
+          "y": 160,
+          "w": 30,
+          "h": 30
+        }
+      ],
+      "at": null
+    },
+    {
+      "id": "rockB",
+      "rects": [
+        {
+          "x": 460,
+          "y": 700,
+          "w": 30,
+          "h": 30
+        }
+      ],
+      "at": null
+    },
+    {
+      "id": "rockC",
+      "rects": [
+        {
+          "x": 1260,
+          "y": 650,
+          "w": 30,
+          "h": 30
+        }
+      ],
+      "at": null
+    }
+  ],
+  "jobs": {
+    "apples": {
+      "source": "appleTree",
+      "target": "pieBasket",
+      "unit": "apple",
+      "carry": "perGroup"
+    },
+    "socks": {
+      "source": "sockBasket",
+      "target": "washingLine",
+      "unit": "sock",
+      "carry": 2
+    },
+    "eggs": {
+      "source": "henHouse",
+      "target": "eggCrate",
+      "unit": "egg",
+      "carry": "perGroup"
+    },
+    "extra": {
+      "source": "appleTree",
+      "target": "pieBasket",
+      "unit": "apple",
+      "carry": "perGroup"
+    }
+  },
+  "asks": {
+    "apples": [
+      {
+        "voice": "gran",
+        "text": "<Groups> rows of <per> for the pie, little map."
+      }
+    ],
+    "socks": [
+      {
+        "voice": "gran",
+        "text": "<Groups> pairs on the line, little map."
+      }
+    ],
+    "eggs": [
+      {
+        "voice": "gran",
+        "text": "<Groups> nests, <per> eggs from each."
+      },
+      {
+        "voice": "gran",
+        "text": "Into the crate, little map."
+      }
+    ],
+    "extra": [
+      {
+        "voice": "gran",
+        "text": "One more pie, little map."
+      },
+      {
+        "voice": "gran",
+        "text": "<Groups> rows of <per>."
+      }
+    ]
+  },
+  "lines": {
+    "start": [
+      {
+        "voice": "gran",
+        "text": "Morning, little map. A few small jobs, if you will."
+      }
+    ],
+    "right": {
+      "apples": [
+        {
+          "voice": "gran",
+          "text": "Into the pie they go. Thank you, little map."
+        }
+      ],
+      "socks": [
+        {
+          "voice": "gran",
+          "text": "Pairs on the line, just so."
+        }
+      ],
+      "eggs": [
+        {
+          "voice": "gran",
+          "text": "Not one cracked. Well done, little map."
+        }
+      ],
+      "extra": [
+        {
+          "voice": "gran",
+          "text": "That's the second pie. Thank you, little map."
+        }
+      ]
+    },
+    "short": [
+      {
+        "voice": "gran",
+        "text": "Count the rows with me, little map."
+      }
+    ],
+    "many": [
+      {
+        "voice": "gran",
+        "text": "A few too many. Pick the extras up, little map."
+      }
+    ],
+    "copy": [
+      {
+        "voice": "gran",
+        "text": "Here, we'll count them together."
+      }
+    ],
+    "close": {
+      "lantern": [
+        {
+          "voice": "gran",
+          "text": "Keep the lamp lit, little map. It's for later."
+        },
+        {
+          "voice": "narrator",
+          "text": "That is almost all she remembers of Gran."
+        }
+      ],
+      "grey": [
+        {
+          "voice": "narrator",
+          "text": "Morning... sorry, do I know you?"
+        },
+        {
+          "voice": "narrator",
+          "text": "The Grey had come. Everyone was forgetting."
+        }
+      ],
+      "lamp": [
+        {
+          "voice": "narrator",
+          "text": "Where its light fell, the Grey stopped."
+        }
+      ],
+      "ambrose": [
+        {
+          "voice": "ambrose",
+          "text": "You're Nettie's girl. I remember. Get on."
+        },
+        {
+          "voice": "ambrose",
+          "text": "The orchard's going grey. Let's measure it back."
+        }
+      ]
+    }
+  },
+  "ui": {
+    "start": "Tap to begin",
+    "stop": "Stop here for today",
+    "saved": "Saved. The morning waits.",
+    "carryOn": "Carry on",
+    "next": "Next",
+    "playAgain": "Play again",
+    "turn": "Turn your phone sideways to play",
+    "end": "The morning ends here. Tallyfold's orchard is the next part.",
+    "locked": "The morning is open in another tab.",
+    "unsupported": "This browser needs updating to save the morning.",
+    "failed": "Could not save. Try again.",
+    "voices": "The voices did not load. Try again."
+  }
+}
