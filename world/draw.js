@@ -16,7 +16,7 @@ export function mix(a, b, p) {
   return (m(16) << 16) | (m(8) << 8) | m(0);
 }
 
-function tri(g, a, b, c, col) {
+export function tri(g, a, b, c, col) {
   g.fillStyle(col, 1).fillTriangle(a[0], a[1], b[0], b[1], c[0], c[1]);
 }
 
@@ -27,7 +27,7 @@ const poly = (g, list, col, alpha = 1) => g.fillStyle(col, alpha).fillPoints(pts
 
 // a four-cornered patch [top-left, top-right, bottom-right, bottom-left] cut into jittered triangles, each shaded by how
 // far right it lies: the way every wall, roof and field here is lit
-function grid(g, rng, [tl, tr, br, bl], nx, ny, col, { jit = 0, light = 0.3, noise = 5, dark = 0 } = {}) {
+export function grid(g, rng, [tl, tr, br, bl], nx, ny, col, { jit = 0, light = 0.3, noise = 5, dark = 0 } = {}) {
   const left = Math.min(tl[0], bl[0]), right = Math.max(tr[0], br[0]);
   const at = (i, j) => {
     const u = i / nx, v = j / ny, edge = i === 0 || j === 0 || i === nx || j === ny;
@@ -50,7 +50,7 @@ function grid(g, rng, [tl, tr, br, bl], nx, ny, col, { jit = 0, light = 0.3, noi
 }
 
 // a polygon cut into a fan from its middle, each triangle shaded by which way it faces
-function fan(g, rng, list, col, strength = 0.5) {
+export function fan(g, rng, list, col, strength = 0.5) {
   const n = list.length, cx = list.reduce((s, p) => s + p[0], 0) / n, cy = list.reduce((s, p) => s + p[1], 0) / n;
   const r = Math.max(...list.map((p) => Math.hypot(p[0] - cx, p[1] - cy))) || 1;
   for (let i = 0; i < n; i++) {
@@ -60,7 +60,7 @@ function fan(g, rng, list, col, strength = 0.5) {
 }
 
 // a rounded lump of leaves or stone: an uneven ring of points around (cx, cy), fanned
-function lump(g, rng, cx, cy, rx, ry, col, strength = 0.55, sides = 10) {
+export function lump(g, rng, cx, cy, rx, ry, col, strength = 0.55, sides = 10) {
   const ring = [];
   for (let i = 0; i < sides; i++) {
     const a = (i / sides) * Math.PI * 2, k = 0.82 + rng.next() * 0.3;
@@ -72,7 +72,7 @@ function lump(g, rng, cx, cy, rx, ry, col, strength = 0.55, sides = 10) {
 const bar = (g, x, y, w, h, col) => g.fillStyle(col, 1).fillRect(x, y, w, h);
 
 // a plank face: a rectangle of upright boards, lighter to the right
-function boards(g, rng, x, y, w, h, n, col, vertical = true) {
+export function boards(g, rng, x, y, w, h, n, col, vertical = true) {
   for (let i = 0; i < n; i++) {
     const a = vertical ? x + (w * i) / n : x, b = vertical ? y : y + (h * i) / n;
     const bw = vertical ? w / n : w, bh = vertical ? h : h / n;
@@ -231,7 +231,7 @@ function cottage(g, rng) {
 
 // ---- the apple tree and its ladder ----
 
-function appleTree(g, rng) {
+export function appleTree(g, rng) {
   poly(g, [[92, 240], [138, 240], [130, 170], [126, 118], [106, 118], [100, 170]], 0x6b4a2c);
   tri(g, [116, 118], [138, 240], [118, 240], shade(0x6b4a2c, 0.2));
   tri(g, [92, 240], [104, 190], [86, 240], shade(0x6b4a2c, -0.2));
@@ -334,7 +334,7 @@ function washingLine(g, rng) {
 
 // ---- Ambrose, the cart-sized turtle: asleep with his head down, or standing with it up ----
 
-function ambrose(g, awake) {
+export function ambrose(g, awake) {
   const rng = (() => { let s = 7; return { next: () => ((s = (s * 16807) % 2147483647) / 2147483647) }; })();
   const int = (a, b) => a + Math.floor(rng.next() * (b - a + 1));
   const long = awake ? STAND : 0; // on his feet, the legs are straight and the shell is carried higher
@@ -411,7 +411,7 @@ function lantern(g) {
 
 // ---- the girl: a faceted child in a yellow coat with a pack, seen from the front, the back and the side ----
 
-function girl(g, view, frame) {
+export function girl(g, view, frame) {
   const step = frame ? 3 : 0;
   const coat = 0xe9b838, coatLit = shade(coat, 0.22), coatDark = shade(coat, -0.18), pack = 0x7a5230, hair = 0x5a3a24, boot = 0x3a2617, trouser = 0x5d6a8a;
   if (view === 'side') {
@@ -489,14 +489,14 @@ function hen(g, col) {
 
 // ---- fences: a post and two rails, across the top and bottom and down the sides ----
 
-function fenceAcross(g, rng) {
+export function fenceAcross(g, rng) {
   for (const y of [18, 32]) boards(g, rng, 0, y, 56, 5, 1, 0xa8703f, false);
   poly(g, [[3, 50], [13, 50], [12, 10], [4, 10]], 0x8a5a33);
   tri(g, [8, 10], [13, 50], [8, 50], shade(0x8a5a33, 0.22));
   tri(g, [3, 10], [13, 10], [8, 4], shade(0x8a5a33, 0.18));
 }
 
-function fenceDown(g, rng) {
+export function fenceDown(g, rng) {
   for (const y of [18, 32]) boards(g, rng, 5, y, 6, 52, 1, 0xa8703f);
   poly(g, [[3, 50], [13, 50], [12, 10], [4, 10]], 0x8a5a33);
   tri(g, [8, 10], [13, 50], [8, 50], shade(0x8a5a33, 0.22));
@@ -505,7 +505,7 @@ function fenceDown(g, rng) {
 
 // ---- the things she carries: an apple, an egg, and four socks ----
 
-function units(g) {
+export function units(g) {
   g.fillStyle(0xc53a2a, 1).fillCircle(6, 6.5, 5.6);
   tri(g, [6, 1], [11, 7], [6, 12], shade(0xd8432e, 0.12));
   g.fillStyle(0x5f8f3a, 1).fillTriangle(6, 1, 10, -1, 9, 3);
@@ -523,7 +523,7 @@ function units(g) {
 
 // ---- the marks that guide her: a gold cell, an empty square with no number in it, and the bobbing arrow ----
 
-function marks(g) {
+export function marks(g) {
   g.fillStyle(0xf4c25b, 0.2).fillRect(1, 1, 10, 10);
   g.fillStyle(0xf2b53a, 1).fillRect(0, 0, 12, 1.6).fillRect(0, 10.4, 12, 1.6).fillRect(0, 0, 1.6, 12).fillRect(10.4, 0, 1.6, 12);
   g.generateTexture('cell', 12, 12); g.clear();
@@ -535,7 +535,7 @@ function marks(g) {
 
 // ---- the neighbour: a woman in grey, drawn as Gran is but in the Grey's colours, one hand raised to her chin ----
 
-function neighbour(g, rng) {
+export function neighbour(g, rng) {
   const skirt = 0x7a7f92, shawl = 0x8f96ab, apron = 0xd6d4cc;
   poly(g, [[12, 40], [36, 40], [46, 82], [2, 82]], skirt);
   fan(g, rng, [[12, 40], [36, 40], [46, 82], [2, 82]], skirt, 0.4);
@@ -568,7 +568,7 @@ function smallLantern(g) {
 
 // ---- the Grey's edge: clear on the left, thick fog from a third of the way across to the right ----
 
-function fogEdge(scene) {
+export function fogEdge(scene) {
   const c = scene.textures.createCanvas('fogedge', 512, 8), x = c.getContext(), grad = x.createLinearGradient(0, 0, 512, 0);
   grad.addColorStop(0, 'rgba(185,188,196,0)');
   grad.addColorStop(0.3, 'rgba(185,188,196,1)');

@@ -6,7 +6,7 @@
 // after a save that worked, and a line said for a stage, or before Stop, never goes on after it.
 
 import * as speech from '../js/speech.js';
-import { Store } from '../engine/store.js';
+import { Store, EVENTS_KEY } from '../engine/store.js';
 import { K, reachable, pickItems, newJob, askLines, check, pickUp, setDown, putBack, pickGround, actionTarget, stageNext, probeResult, placementEvents, answerEvent } from './logic.js';
 import { SAVE_KEY, loadSave, saveNow, openSession, commitTransition, beginNewRun } from './save.js';
 import { MorningScene } from './scene.js';
@@ -272,7 +272,15 @@ function finishJob(job) {
 
 // ---- the end: Play again begins a new morning, and only a successful write of it lets anything move ----
 function showEnd() {
-  showCard(data.ui.end, [[data.ui.playAgain, playAgain]]);
+  showCard(data.ui.end, [[data.ui.toOrchard, toOrchard], [data.ui.playAgain, playAgain]]);
+}
+// the morning is saved at its end: the lease goes back with nothing written, so the orchard's page can take it, and a
+// Back press to this page takes it again (pageshow calls takeOver when parked is 'hidden')
+function toOrchard() {
+  if (!lease || life.parked) return;
+  halt();
+  park('hidden');
+  location.assign('orchard.html');
 }
 function playAgain() {
   // one proposed run for this press: a write that fails is tried again with the very same run
@@ -460,9 +468,22 @@ function refuse() {
   lease = null;
   showCard(data.ui.unsupported);
 }
+function orchardEvents(text) {
+  try {
+    const list = JSON.parse(text);
+    return Array.isArray(list) ? list.filter((e) => typeof e?.id === 'string' && e.id.startsWith('unmapped-orchard-')) : [];
+  } catch { return []; }
+}
 // this copy's own storage keys begin with the prefix: ?fresh clears them, once this tab has the lease, and comes back without ?fresh
 function clearOwn() {
-  for (const key of Object.keys(storage)) if (key.startsWith(PREFIX)) storage.removeItem(key);
+  // the orchard's save and its backups begin with the same prefix and are not the morning's to clear, and nor are its events: the
+  // two pieces share one event log, so it is cut down to the orchard's instead of removed (the ids world/orchard-logic.js gives its
+  // events begin `unmapped-orchard-`; tests/orchard-tools.test.js, case 10, checks that this and that agree)
+  for (const key of Object.keys(storage)) {
+    if (!key.startsWith(PREFIX) || key.startsWith(`${PREFIX}orchard.`)) continue;
+    const kept = key === EVENTS_KEY ? orchardEvents(storage.getItem(key)) : [];
+    if (kept.length) storage.setItem(key, JSON.stringify(kept)); else storage.removeItem(key);
+  }
   const url = new URL(location.href);
   url.searchParams.delete('fresh');
   lease.release();

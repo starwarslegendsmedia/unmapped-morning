@@ -1,0 +1,929 @@
+{
+ "K": {
+  "WORLD": {
+   "w": 1800,
+   "h": 900
+  },
+  "START": {
+   "x": 680,
+   "y": 740
+  },
+  "TREE_ROWS": 10,
+  "OLD_TREES": 12,
+  "FIELD_ROWS": 10
+ },
+ "objects": [
+  {
+   "id": "gatePostA",
+   "rects": [
+    {
+     "x": 60,
+     "y": 700,
+     "w": 20,
+     "h": 30
+    }
+   ],
+   "at": null
+  },
+  {
+   "id": "gatePostB",
+   "rects": [
+    {
+     "x": 60,
+     "y": 820,
+     "w": 20,
+     "h": 30
+    }
+   ],
+   "at": null
+  },
+  {
+   "id": "wren",
+   "rects": [],
+   "at": {
+    "x": 200,
+    "y": 640
+   }
+  },
+  {
+   "id": "basket",
+   "rects": [
+    {
+     "x": 250,
+     "y": 600,
+     "w": 50,
+     "h": 30
+    }
+   ],
+   "at": {
+    "x": 275,
+    "y": 660
+   }
+  },
+  {
+   "id": "crate",
+   "rects": [
+    {
+     "x": 640,
+     "y": 800,
+     "w": 60,
+     "h": 40
+    }
+   ],
+   "at": {
+    "x": 670,
+    "y": 860
+   }
+  },
+  {
+   "id": "gateTree0",
+   "rects": [
+    {
+     "x": 380,
+     "y": 560,
+     "w": 40,
+     "h": 30
+    }
+   ],
+   "at": {
+    "x": 400,
+    "y": 620
+   }
+  },
+  {
+   "id": "gateTree1",
+   "rects": [
+    {
+     "x": 460,
+     "y": 560,
+     "w": 40,
+     "h": 30
+    }
+   ],
+   "at": {
+    "x": 480,
+    "y": 620
+   }
+  },
+  {
+   "id": "gateTree2",
+   "rects": [
+    {
+     "x": 540,
+     "y": 560,
+     "w": 40,
+     "h": 30
+    }
+   ],
+   "at": {
+    "x": 560,
+    "y": 620
+   }
+  },
+  {
+   "id": "gateTree3",
+   "rects": [
+    {
+     "x": 620,
+     "y": 560,
+     "w": 40,
+     "h": 30
+    }
+   ],
+   "at": {
+    "x": 640,
+    "y": 620
+   }
+  },
+  {
+   "id": "gateTree4",
+   "rects": [
+    {
+     "x": 700,
+     "y": 560,
+     "w": 40,
+     "h": 30
+    }
+   ],
+   "at": {
+    "x": 720,
+    "y": 620
+   }
+  },
+  {
+   "id": "gateTree5",
+   "rects": [
+    {
+     "x": 780,
+     "y": 560,
+     "w": 40,
+     "h": 30
+    }
+   ],
+   "at": {
+    "x": 800,
+    "y": 620
+   }
+  },
+  {
+   "id": "gateTree6",
+   "rects": [
+    {
+     "x": 860,
+     "y": 560,
+     "w": 40,
+     "h": 30
+    }
+   ],
+   "at": {
+    "x": 880,
+    "y": 620
+   }
+  },
+  {
+   "id": "gateTree7",
+   "rects": [
+    {
+     "x": 940,
+     "y": 560,
+     "w": 40,
+     "h": 30
+    }
+   ],
+   "at": {
+    "x": 960,
+    "y": 620
+   }
+  },
+  {
+   "id": "gateTree8",
+   "rects": [
+    {
+     "x": 1020,
+     "y": 560,
+     "w": 40,
+     "h": 30
+    }
+   ],
+   "at": {
+    "x": 1040,
+    "y": 620
+   }
+  },
+  {
+   "id": "gateTree9",
+   "rects": [
+    {
+     "x": 1100,
+     "y": 560,
+     "w": 40,
+     "h": 30
+    }
+   ],
+   "at": {
+    "x": 1120,
+    "y": 620
+   }
+  },
+  {
+   "id": "barn",
+   "rects": [
+    {
+     "x": 80,
+     "y": 60,
+     "w": 280,
+     "h": 200
+    }
+   ],
+   "at": null
+  },
+  {
+   "id": "hobb",
+   "rects": [],
+   "at": {
+    "x": 300,
+    "y": 300
+   }
+  },
+  {
+   "id": "oldTree0",
+   "rects": [
+    {
+     "x": 460,
+     "y": 120,
+     "w": 40,
+     "h": 30
+    }
+   ],
+   "at": {
+    "x": 480,
+    "y": 180
+   }
+  },
+  {
+   "id": "oldTree1",
+   "rects": [
+    {
+     "x": 570,
+     "y": 120,
+     "w": 40,
+     "h": 30
+    }
+   ],
+   "at": {
+    "x": 590,
+    "y": 180
+   }
+  },
+  {
+   "id": "oldTree2",
+   "rects": [
+    {
+     "x": 680,
+     "y": 120,
+     "w": 40,
+     "h": 30
+    }
+   ],
+   "at": {
+    "x": 700,
+    "y": 180
+   }
+  },
+  {
+   "id": "oldTree3",
+   "rects": [
+    {
+     "x": 790,
+     "y": 120,
+     "w": 40,
+     "h": 30
+    }
+   ],
+   "at": {
+    "x": 810,
+    "y": 180
+   }
+  },
+  {
+   "id": "oldTree4",
+   "rects": [
+    {
+     "x": 900,
+     "y": 120,
+     "w": 40,
+     "h": 30
+    }
+   ],
+   "at": {
+    "x": 920,
+    "y": 180
+   }
+  },
+  {
+   "id": "oldTree5",
+   "rects": [
+    {
+     "x": 1010,
+     "y": 120,
+     "w": 40,
+     "h": 30
+    }
+   ],
+   "at": {
+    "x": 1030,
+    "y": 180
+   }
+  },
+  {
+   "id": "oldTree6",
+   "rects": [
+    {
+     "x": 460,
+     "y": 280,
+     "w": 40,
+     "h": 30
+    }
+   ],
+   "at": {
+    "x": 480,
+    "y": 340
+   }
+  },
+  {
+   "id": "oldTree7",
+   "rects": [
+    {
+     "x": 570,
+     "y": 280,
+     "w": 40,
+     "h": 30
+    }
+   ],
+   "at": {
+    "x": 590,
+    "y": 340
+   }
+  },
+  {
+   "id": "oldTree8",
+   "rects": [
+    {
+     "x": 680,
+     "y": 280,
+     "w": 40,
+     "h": 30
+    }
+   ],
+   "at": {
+    "x": 700,
+    "y": 340
+   }
+  },
+  {
+   "id": "oldTree9",
+   "rects": [
+    {
+     "x": 790,
+     "y": 280,
+     "w": 40,
+     "h": 30
+    }
+   ],
+   "at": {
+    "x": 810,
+    "y": 340
+   }
+  },
+  {
+   "id": "oldTree10",
+   "rects": [
+    {
+     "x": 900,
+     "y": 280,
+     "w": 40,
+     "h": 30
+    }
+   ],
+   "at": {
+    "x": 920,
+    "y": 340
+   }
+  },
+  {
+   "id": "oldTree11",
+   "rects": [
+    {
+     "x": 1010,
+     "y": 280,
+     "w": 40,
+     "h": 30
+    }
+   ],
+   "at": {
+    "x": 1030,
+    "y": 340
+   }
+  },
+  {
+   "id": "ambrose",
+   "rects": [
+    {
+     "x": 760,
+     "y": 690,
+     "w": 220,
+     "h": 110
+    }
+   ],
+   "at": {
+    "x": 870,
+    "y": 830
+   }
+  },
+  {
+   "id": "roadside",
+   "rects": [],
+   "at": {
+    "x": 1180,
+    "y": 860
+   }
+  },
+  {
+   "id": "farmer",
+   "rects": [],
+   "at": {
+    "x": 1250,
+    "y": 470
+   }
+  },
+  {
+   "id": "cart",
+   "rects": [
+    {
+     "x": 1220,
+     "y": 560,
+     "w": 80,
+     "h": 50
+    }
+   ],
+   "at": {
+    "x": 1260,
+    "y": 640
+   }
+  },
+  {
+   "id": "row0",
+   "rects": [],
+   "at": {
+    "x": 1380,
+    "y": 800
+   }
+  },
+  {
+   "id": "row1",
+   "rects": [],
+   "at": {
+    "x": 1420,
+    "y": 800
+   }
+  },
+  {
+   "id": "row2",
+   "rects": [],
+   "at": {
+    "x": 1460,
+    "y": 800
+   }
+  },
+  {
+   "id": "row3",
+   "rects": [],
+   "at": {
+    "x": 1500,
+    "y": 800
+   }
+  },
+  {
+   "id": "row4",
+   "rects": [],
+   "at": {
+    "x": 1540,
+    "y": 800
+   }
+  },
+  {
+   "id": "row5",
+   "rects": [],
+   "at": {
+    "x": 1580,
+    "y": 800
+   }
+  },
+  {
+   "id": "row6",
+   "rects": [],
+   "at": {
+    "x": 1620,
+    "y": 800
+   }
+  },
+  {
+   "id": "row7",
+   "rects": [],
+   "at": {
+    "x": 1660,
+    "y": 800
+   }
+  },
+  {
+   "id": "row8",
+   "rects": [],
+   "at": {
+    "x": 1700,
+    "y": 800
+   }
+  },
+  {
+   "id": "row9",
+   "rects": [],
+   "at": {
+    "x": 1740,
+    "y": 800
+   }
+  }
+ ],
+ "numbers": {
+  "wren": {
+   "big": [
+    {
+     "total": 84,
+     "per": 12
+    },
+    {
+     "total": 63,
+     "per": 9
+    },
+    {
+     "total": 48,
+     "per": 8
+    }
+   ]
+  },
+  "hobb": {
+   "big": [
+    {
+     "people": 6,
+     "each": 8,
+     "per": 12
+    },
+    {
+     "people": 4,
+     "each": 9,
+     "per": 6
+    },
+    {
+     "people": 8,
+     "each": 9,
+     "per": 12
+    }
+   ],
+   "small": [
+    {
+     "people": 3,
+     "each": 8,
+     "per": 4
+    },
+    {
+     "people": 4,
+     "each": 6,
+     "per": 3
+    },
+    {
+     "people": 3,
+     "each": 10,
+     "per": 5
+    }
+   ]
+  },
+  "farmer": {
+   "big": [
+    {
+     "total": 50,
+     "per": 8
+    },
+    {
+     "total": 45,
+     "per": 6
+    },
+    {
+     "total": 60,
+     "per": 9
+    }
+   ],
+   "small": [
+    {
+     "total": 22,
+     "per": 4
+    },
+    {
+     "total": 17,
+     "per": 3
+    },
+    {
+     "total": 23,
+     "per": 5
+    }
+   ]
+  }
+ },
+ "lines": {
+  "arrive": [
+   {
+    "voice": "narrator",
+    "text": "Ambrose carried her into Tallyfold. Half the orchard had gone grey."
+   },
+   {
+    "voice": "narrator",
+    "who": "Wren",
+    "text": "Please, can you help us? My children haven't eaten since yesterday."
+   },
+   {
+    "voice": "narrator",
+    "who": "Hobb",
+    "text": "Hands off! Those trees are for winter!"
+   },
+   {
+    "voice": "narrator",
+    "text": "Nobody in Tallyfold could remember how many apples they needed. The Grey had taken that too."
+   },
+   {
+    "voice": "ambrose",
+    "text": "Your lamp shows what people forget. Go and talk to the woman at the gate."
+   }
+  ],
+  "ask": {
+   "wren": [
+    {
+     "voice": "narrator",
+     "who": "Wren",
+     "text": "We need {total} apples to last us the week."
+    },
+    {
+     "voice": "narrator",
+     "who": "Wren",
+     "text": "Each tree by the gate gives {per} when you shake it."
+    },
+    {
+     "voice": "narrator",
+     "who": "Wren",
+     "text": "Shake as many trees as we need, then tip the apples into my basket and tell me."
+    }
+   ],
+   "hobb": [
+    {
+     "voice": "narrator",
+     "who": "Hobb",
+     "text": "There are {people} of us, and each of us needs {each} apples to get through the winter."
+    },
+    {
+     "voice": "narrator",
+     "who": "Hobb",
+     "text": "These old trees give {per} apples each."
+    },
+    {
+     "voice": "narrator",
+     "who": "Hobb",
+     "text": "Chalk the trees I may take, and not one more. The rest are for the village. Then come and tell me."
+    }
+   ],
+   "farmer": [
+    {
+     "voice": "narrator",
+     "who": "Farmer",
+     "text": "There are {total} saplings on the cart, and each row takes {per}."
+    },
+    {
+     "voice": "narrator",
+     "who": "Farmer",
+     "text": "Dig the rows first, enough for every sapling, even if the last row is short."
+    },
+    {
+     "voice": "narrator",
+     "who": "Farmer",
+     "text": "When the rows are dug, come to the cart and I'll tell you if they'll do."
+    }
+   ]
+  },
+  "go": {
+   "hobb": [
+    {
+     "voice": "ambrose",
+     "text": "The man in the barn is Hobb. He has forgotten how many apples his family needs. Go and ask him."
+    }
+   ],
+   "farmer": [
+    {
+     "voice": "ambrose",
+     "text": "There's a farmer sitting by that bare field. His saplings will die on the cart if nobody plants them. Go and see him."
+    }
+   ]
+  },
+  "refuse": [
+   {
+    "voice": "narrator",
+    "who": "Farmer",
+    "text": "Leave it be. If I can't remember, nobody expects anything of me."
+   },
+   {
+    "voice": "ambrose",
+    "text": "Help him anyway."
+   }
+  ],
+  "short": {
+   "wren": [
+    {
+     "voice": "narrator",
+     "who": "Wren",
+     "text": "That isn't enough to last us the week. Let your lamp show you."
+    }
+   ],
+   "hobb": [
+    {
+     "voice": "narrator",
+     "who": "Hobb",
+     "text": "That won't see us through the winter. Let your lamp show you."
+    }
+   ],
+   "farmer": [
+    {
+     "voice": "narrator",
+     "who": "Farmer",
+     "text": "Not every sapling has a row. Let your lamp show you."
+    }
+   ]
+  },
+  "many": {
+   "wren": [
+    {
+     "voice": "narrator",
+     "who": "Wren",
+     "text": "That's more than we need. Put the extra in the village crate by the road."
+    }
+   ],
+   "hobb": [
+    {
+     "voice": "narrator",
+     "who": "Hobb",
+     "text": "That's more than our share. Rub some out."
+    }
+   ],
+   "farmer": [
+    {
+     "voice": "narrator",
+     "who": "Farmer",
+     "text": "Some rows would stand empty. Fill in the ones you don't need."
+    }
+   ]
+  },
+  "copy": {
+   "wren": [
+    {
+     "voice": "narrator",
+     "who": "Wren",
+     "text": "Here, let's fill it together, row by row."
+    }
+   ],
+   "hobb": [
+    {
+     "voice": "narrator",
+     "who": "Hobb",
+     "text": "Here, we'll chalk them together."
+    }
+   ],
+   "farmer": [
+    {
+     "voice": "narrator",
+     "who": "Farmer",
+     "text": "Here, I'll mark the rows. You dig them."
+    }
+   ]
+  },
+  "right": {
+   "wren": [
+    {
+     "voice": "narrator",
+     "who": "Wren",
+     "text": "That will last us the week. Thank you, whoever you are."
+    },
+    {
+     "voice": "narrator",
+     "text": "The trees by the gate took back their colour."
+    }
+   ],
+   "hobb": [
+    {
+     "voice": "narrator",
+     "who": "Hobb",
+     "text": "Just enough for the winter, and plenty left for the village."
+    },
+    {
+     "voice": "narrator",
+     "who": "Hobb",
+     "text": "You've Nettie's look about you. You're Nettie's girl, aren't you?"
+    },
+    {
+     "voice": "narrator",
+     "text": "Helping him had lifted the Grey from one small memory. His old trees took back their colour."
+    }
+   ],
+   "farmer": [
+    {
+     "voice": "narrator",
+     "who": "Farmer",
+     "text": "That will do. Fetch the saplings from the cart, one row at a time."
+    }
+   ]
+  },
+  "leftovers": [
+   {
+    "voice": "ambrose",
+    "text": "There are a few apples left on the far trees. Who should have them? Take them to Hobb, to me, or to the side of the road."
+   }
+  ],
+  "choice": {
+   "hobb": [
+    {
+     "voice": "narrator",
+     "who": "Hobb",
+     "text": "More? Bless you, Nettie's girl."
+    }
+   ],
+   "ambrose": [
+    {
+     "voice": "ambrose",
+     "text": "That'll keep these old legs going."
+    }
+   ],
+   "road": [
+    {
+     "voice": "narrator",
+     "text": "She left them by the road for whoever passed. Something in the Grey sniffed the air."
+    }
+   ]
+  },
+  "daughter": [
+   {
+    "voice": "narrator",
+    "who": "Farmer",
+    "text": "I planted the first row of this orchard with my daughter, Tamsin."
+   },
+   {
+    "voice": "narrator",
+    "who": "Farmer",
+    "text": "She went away to Tidemark Harbour. If you ever get there, tell her the orchard is growing again."
+   },
+   {
+    "voice": "narrator",
+    "text": "Remembering hurt him a little. He kept the memory anyway."
+   }
+  ],
+  "night": [
+   {
+    "voice": "narrator",
+    "text": "By dusk, the whole orchard had its colour back."
+   },
+   {
+    "voice": "ambrose",
+    "text": "The orchard remembers."
+   },
+   {
+    "voice": "narrator",
+    "text": "That night, words wrote themselves on her map, in a hand she almost knew."
+   },
+   {
+    "voice": "gran",
+    "text": "Find me before it reaches the sea."
+   },
+   {
+    "voice": "ambrose",
+    "text": "That's Nettie's hand. She's out there, ahead of the Grey. We'll go after her."
+   }
+  ]
+ },
+ "ui": {
+  "start": "Tap to begin",
+  "stop": "Stop here for today",
+  "saved": "Saved. The orchard waits.",
+  "carryOn": "Carry on",
+  "next": "Next",
+  "turn": "Turn your phone sideways to play",
+  "locked": "The game is open in another tab.",
+  "unsupported": "This browser needs updating to save the game.",
+  "failed": "Could not save. Try again.",
+  "voices": "The voices did not load. Try again.",
+  "morningFirst": "The orchard comes after the morning.",
+  "toMorning": "Back to the morning",
+  "end": "The orchard ends here. More of Tallyfold is coming.",
+  "again": "Play the orchard again"
+ }
+}
